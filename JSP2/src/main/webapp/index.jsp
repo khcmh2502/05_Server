@@ -46,6 +46,11 @@
 	</h1>
 	
 	
+	<hr>
+	
+	<h1>
+		<a href="/jstl/test">JSTL 간단히 다뤄보기</a>
+	</h1>
 	
 	
 	
