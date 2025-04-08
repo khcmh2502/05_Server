@@ -31,10 +31,30 @@
 	</div>
 
 	<div class="content">${todo.todoDetail}</div>
-
 	
-
-
+	<div class="btn-container">
+		<div>
+			<button type="button" id="goToList">목록으로</button>
+		</div>
+		
+		<div>
+			<button id="completeBtn">완료 여부 변경</button>
+			<button id="updateBtn">수정</button>
+			<button id="deleteBtn">삭제</button>
+		</div>
+	</div>
+	
+	
+	
+	<%-- session 범위에 message가 있을 경우 --%>
+	<c:if test="${not empty sessionScope.message}">
+		<script>
+			alert("${message}");
+		</script>
+		
+		<c:remove var="message" scope="session" />
+	</c:if>
+	
 	
 	<script src="/resources/js/detail.js"></script>
 </body>
