@@ -7,8 +7,8 @@ import edu.kh.todoList.model.dto.Todo;
 
 public interface TodoListDAO {
 
-	List<Todo> todoListFullView(Connection conn);
+	List<Todo> todoListFullView(Connection conn) throws Exception;
 
-	int getCompleteCount(Connection conn);
+	int getCompleteCount(Connection conn) throws Exception;
 
 }

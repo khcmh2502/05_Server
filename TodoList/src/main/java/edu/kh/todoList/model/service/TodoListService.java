@@ -12,7 +12,7 @@ public interface TodoListService {
 	/** 할 일 목록 반환 서비스
 	 * @return todoList + 완료개수 map
 	 */
-	Map<String, Object> todoListFullView();
+	Map<String, Object> todoListFullView() throws Exception;
 	
 	
 	
