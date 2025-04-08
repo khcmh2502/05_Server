@@ -122,13 +122,21 @@ public class TodoListDAOImpl implements TodoListDAO{
 		int result = 0;
 		
 		try {
+			String sql = prop.getProperty("todoAdd");
 			
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setString(1, title);
+			pstmt.setString(2, detail);
+			
+			result = pstmt.executeUpdate();
 			
 		}finally {
 			
+			close(pstmt);
 		}
 		
-		return 0;
+		return result;
 	}
 
 }

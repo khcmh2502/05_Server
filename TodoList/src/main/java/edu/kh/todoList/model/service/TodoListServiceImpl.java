@@ -48,11 +48,13 @@ public class TodoListServiceImpl implements TodoListService{
 		
 		int result = dao.todoAdd(conn, title, detail);
 		
+		// 트랜잭션 제어처리 -> DML (INSERT/UPDATE/DELETE)
+		if(result > 0) commit(conn);
+		else		   rollback(conn);
 		
+		close(conn);
 		
-		
-		
-		return 0;
+		return result;
 	}
 
 }
