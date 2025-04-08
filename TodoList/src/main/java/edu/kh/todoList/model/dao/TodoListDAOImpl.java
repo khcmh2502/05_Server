@@ -114,4 +114,21 @@ public class TodoListDAOImpl implements TodoListDAO{
 		return completeCount;
 	}
 
+
+	
+	@Override
+	public int todoAdd(Connection conn, String title, String detail) throws Exception {
+		
+		int result = 0;
+		
+		try {
+			
+			
+		}finally {
+			
+		}
+		
+		return 0;
+	}
+
 }
