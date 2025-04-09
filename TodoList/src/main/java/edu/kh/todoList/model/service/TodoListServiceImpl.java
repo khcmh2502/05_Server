@@ -85,4 +85,20 @@ public class TodoListServiceImpl implements TodoListService{
 		return result;
 	}
 
+	@Override
+	public int todoDelete(int todoNo) throws Exception {
+		
+		Connection conn = getConnection();
+		
+		int result = dao.todoDelete(conn, todoNo);
+		
+		// DML은 트랜잭션 처리 필수!
+		if(result > 0) commit(conn);
+		else		   rollback(conn);
+		
+		close(conn);
+		
+		return result;
+	}
+
 }
