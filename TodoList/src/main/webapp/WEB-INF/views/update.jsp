@@ -10,6 +10,8 @@
 <title>${todo.todoTitle} 수정 페이지</title>
 </head>
 <body>
+
+	<h1>${sessionScope.loginMember}</h1>
 	
 	<h4>할 일 수정</h4>
 	
