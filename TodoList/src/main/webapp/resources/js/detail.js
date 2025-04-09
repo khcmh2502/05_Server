@@ -46,4 +46,8 @@ deleteBtn.addEventListener("click", () => {
 });
 
 // 수정 버튼
-
+const updateBtn = document.querySelector("#updateBtn");
+updateBtn.addEventListener("click", () => {
+  // 수정할 수 있는 화면을 요청(Get 방식)
+  location.href = "/todo/update?todoNo=" + todoNo;
+});

@@ -43,6 +43,14 @@ public interface TodoListService {
 	 * @return int 행의 개수
 	 */
 	int todoDelete(int todoNo) throws Exception;
+
+	/** 할 일 수정 서비스
+	 * @param todoNo
+	 * @param title
+	 * @param detail
+	 * @return 행의 개수
+	 */
+	int todoUpdate(int todoNo, String title, String detail) throws Exception;
 	
 	
 	
